@@ -26,6 +26,7 @@ RgsocTeams::Application.routes.draw do
       get 'receipt', as: :receipt
     end
   end
+  resources :mentor_picks, only: [:index]
 
   namespace :applications do
     get 'students/:id', to: 'students#show', as: 'student'
