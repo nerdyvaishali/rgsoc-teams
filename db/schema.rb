@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160409202420) do
+ActiveRecord::Schema.define(version: 20160411205916) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,6 +83,8 @@ ActiveRecord::Schema.define(version: 20160409202420) do
     t.json     "team_snapshot"
     t.integer  "signed_off_by"
     t.datetime "signed_off_at"
+    t.boolean  "mentor_pick_project1"
+    t.boolean  "mentor_pick_project2"
   end
 
   add_index "applications", ["application_draft_id"], name: "index_applications_on_application_draft_id", using: :btree
