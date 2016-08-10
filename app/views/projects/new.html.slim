@@ -2,7 +2,7 @@ nav.page
   .back-nav
     ul
       li = icon('chevron-left')
-      li = link_to 'All Projects', projects_path, class: 'back'
+      li = link_to 'All projects', projects_path, class: 'back'
 
 p.well Please make sure you have read our #{link_to "mentor guide", 'http://railsgirlssummerofcode.org/guide/projects/'} before you submit your Open Source project for the upcoming Rails Girls Summer of Code.
 
@@ -28,3 +28,4 @@ p.well Please make sure you have read our #{link_to "mentor guide", 'http://rail
   .actions
     ul.list-inline
       li = f.submit 'Submit', class: 'btn btn-success'
+      li = link_to 'Cancel', projects_path, class: 'btn btn-default'

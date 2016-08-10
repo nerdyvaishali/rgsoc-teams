@@ -21,6 +21,6 @@ table.table.table-striped.table-bordered.table-condensed
         td = l status_update.created_at, format: :short
         td = status_update.title
         td = render_markdown(status_update.content).html_safe
-        td = link_to 'Show', students_status_update_path(status_update)
-        td = link_to 'Edit', edit_students_status_update_path(status_update)
-        td = link_to 'Destroy', students_status_update_path(status_update), data: { confirm: 'Are you sure?'}, method: :delete
+        td = link_to 'Show', students_status_update_path(status_update), class: 'btn btn-info'
+        td = link_to 'Edit', edit_students_status_update_path(status_update), class: 'btn btn-info'
+        td = link_to 'Delete', students_status_update_path(status_update), data: { confirm: 'Are you sure?'}, method: :delete, class: 'btn btn-default'

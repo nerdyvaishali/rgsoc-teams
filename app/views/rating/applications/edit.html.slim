@@ -11,4 +11,4 @@ h1 = "Application: #{@application.name}"
   = a.input :country, as: :country, label: "Country", prompt: ""
   - Application::FLAGS.each do |key|
     = a.input key, as: :boolean
-  = a.submit 'Save'
+  = a.submit 'Save', class: 'btn btn-success'

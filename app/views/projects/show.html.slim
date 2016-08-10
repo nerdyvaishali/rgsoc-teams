@@ -14,8 +14,8 @@ nav.page
 
 - if can? :edit, @project
   nav.btn-group
-    = link_to 'Edit', edit_project_path(@project), class: 'edit btn btn-default btn-small'
-    = link_to 'Destroy', project_path(@project), method: :delete, data: { confirm: 'This action cannot be undone. Are you sure?' }, class: 'edit btn btn-default btn-small'
+    = link_to 'Edit', edit_project_path(@project), class: 'edit btn btn-info btn-sm'
+    = link_to 'Delete', project_path(@project), method: :delete, data: { confirm: 'This action cannot be undone. Are you sure?' }, class: 'edit btn btn-default btn-sm'
   p
 
 table.table.table-striped.table-bordered
@@ -81,7 +81,7 @@ h2#comments.header
         = f.input :text, as: :text, label: "Comment on this project", input_html: { rows: 5 }, hint: 'You can use basic <a href="http://en.wikipedia.org/wiki/Markdown" target="_blank">Markdown</a> here.'.html_safe, required: true
 
       .form-actions
-        = f.button :submit, 'Save comment'
+        = f.button :submit, 'Save comment', class: 'btn btn-success'
 - else
   p You must be logged in to comment on this project.
 

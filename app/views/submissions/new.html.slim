@@ -10,5 +10,4 @@ p = @mailing.emails.join(', ')
 
 = simple_nested_form_for @submission, url: mailing_submissions_path(@mailing) do |f|
   .actions
-    = f.submit 'Submit now', class: 'btn'
-
+    = f.submit 'Submit now', class: 'btn btn-success'

@@ -92,7 +92,7 @@ p.attention
 
         - elsif application_draft.persisted?
           .actions
-            = link_to 'Check Validity',  [:check, application_draft], class: 'btn btn-info', id: 'verify_application_draft'
+            = link_to 'Check Validity',  [:check, application_draft], class: 'btn btn-success', id: 'verify_application_draft'
             .hidden.unsaved_application_changes_notice.help-block
               p You have unsaved changes in your application form. Please save before validating.
 

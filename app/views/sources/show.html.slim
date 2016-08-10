@@ -3,9 +3,8 @@ nav.page
     li = link_to 'Back', sources_path(@team), class: 'back'
 nav.actions
   ul
-    li = link_to 'Edit', edit_source_path(@source), class: 'edit'
+    li = link_to 'Edit', edit_source_path(@source), class: 'edit btn btn-info'
 
 p
   strong 'URL: '
   = @source.url
-

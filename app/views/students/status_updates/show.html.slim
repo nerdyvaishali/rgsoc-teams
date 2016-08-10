@@ -9,5 +9,10 @@ h1 Status Update for Team #{@status_update.team.name}
 
   p = render_markdown(@status_update.content).html_safe
 
-= link_to 'Edit', edit_students_status_update_path(@status_update), class: 'btn btn-default'
-= link_to 'Back', students_status_updates_path, class: 'btn btn-default'
+= link_to 'Edit this status update', edit_students_status_update_path(@status_update), class: 'btn btn-info'
+
+nav.page
+  .back-nav
+    ul
+      li = icon('chevron-left')
+      li = link_to 'Back to updates', students_status_updates_path, class: 'back'

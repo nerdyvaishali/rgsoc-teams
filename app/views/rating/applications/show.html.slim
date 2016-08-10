@@ -63,7 +63,7 @@
       = f.input :commentable_id, as: :hidden
       = f.input :commentable_type, as: :hidden
       = f.input :text
-      = f.submit 'Add comment'
+      = f.submit 'Add comment', class: 'btn btn-success'
 
 
 = render '/rating/shared/rating_sidebar', rating: @rating, application: @application, path_parents: [:rating]

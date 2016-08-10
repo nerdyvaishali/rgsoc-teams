@@ -1,10 +1,11 @@
 h1 Sources
 
-form.filter action=sources_path
-  - (['all'] + Source::KINDS).each do |kind|
-    label.radio
-      = radio_button_tag :kind, kind == 'all' ? '' : kind, params[:kind] == kind
-      = kind.capitalize
+.selection-box
+  form.filter.form-inline action=sources_path
+    - (['all'] + Source::KINDS).each do |kind|
+      label.radio
+        = radio_button_tag :kind, kind == 'all' ? '' : kind, params[:kind] == kind
+        = kind.capitalize
 
 table.table.table-striped.table-bordered.table-condensed
   thead
@@ -15,4 +16,3 @@ table.table.table-striped.table-bordered.table-condensed
     - @sources.each do |source|
       tr
         td = link_to source.url, source.url
-

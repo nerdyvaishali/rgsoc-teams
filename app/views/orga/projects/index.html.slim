@@ -26,9 +26,8 @@ table.table.table-striped.table-bordered.table-condensed
             = link_to 'Reject', [:reject, :orga, project], method: :put, class: 'btn btn-sm btn-danger'
         td
           - if project.comments_locked?
-            = link_to 'Unlock comments', [:unlock, :orga, project], method: :put, class: 'btn btn-sm btn-warning'
+            = link_to 'Unlock comments', [:unlock, :orga, project], method: :put, class: 'btn btn-sm btn-info'
           - else
-            = link_to 'Lock comments', [:lock, :orga, project], method: :put, class: 'btn btn-sm btn-warning'
+            = link_to 'Lock comments', [:lock, :orga, project], method: :put, class: 'btn btn-sm btn-info'
 
 br
-

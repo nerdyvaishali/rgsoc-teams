@@ -1,5 +1,10 @@
+nav.page
+  .back-nav
+    ul
+      li = icon('chevron-left')
+      li = link_to 'Back to dashboard', supervisor_path, class: 'back'
+
 h2 = 'Checks history'
-= link_to 'Back to Dashboard', supervisor_path
 
 p.pagination-info
   = render @comments

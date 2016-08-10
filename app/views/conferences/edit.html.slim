@@ -5,10 +5,8 @@ nav.page
 nav.actions
   ul
     li
-      = link_to 'Destroy', conference, data: { confirm: 'Are you sure?' }, method: :delete, class: 'destroy'
+      = link_to 'Delete conference', conference, data: { confirm: 'Are you sure?' }, method: :delete, class: 'destroy btn btn-default'
 
 h1 Editing conference
 
 == render 'form'
-
-
