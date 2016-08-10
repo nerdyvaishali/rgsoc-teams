@@ -16,14 +16,14 @@ nav.page
 
 - if can? :edit, @team
   nav
-    = link_to 'Edit', edit_team_path(@team), class: 'edit btn btn-info btn-small'
+    = link_to 'Edit', edit_team_path(@team), class: 'edit btn btn-info btn-sm'
     div.btn-group
-      = link_to 'Add a source', new_team_source_path(@team), class: 'btn btn-info btn-small'
-      = link_to 'Add a member', new_team_role_path(@team), class: 'btn btn-info btn-small'
+      = link_to 'Add a source', new_team_source_path(@team), class: 'btn btn-info btn-sm'
+      = link_to 'Add a member', new_team_role_path(@team), class: 'btn btn-info btn-sm'
     div.btn-group
       - if can? :read, :users_info
         - team_group_emails(@team).each do |group, emails|
-          = link_to "Email #{group}", "mailto:#{emails.join(',')}", class: 'btn btn-warning btn-small'
+          = link_to "Email #{group}", "mailto:#{emails.join(',')}", class: 'btn btn-warning btn-sm'
 
 .profile
   dl

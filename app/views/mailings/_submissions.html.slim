@@ -10,4 +10,4 @@
     tbody
       = render partial: 'mailings/submission', collection: submissions
 - else
-  p = link_to 'Send now', new_mailing_submission_path(@mailing), class: 'btn btn-small btn-success'
+  p = link_to 'Send now', new_mailing_submission_path(@mailing), class: 'btn btn-sm btn-success'

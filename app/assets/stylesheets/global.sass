@@ -38,8 +38,19 @@ html, body
     outline: 0
 
 // override Bootstrap btn
+.btn-group
+  margin: 0.1em 0
 .btn
-  margin: 0 0 0 0.6rem
+  background-image: none
+.btn-default, .btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger
+  box-shadow: none
+  text-shadow: none
+.btn-default
+  background-color: #eee
+input.btn[value="Go"]
+  margin: 0 0 0 0.6em
+.btn-sm
+  font-size: 0.9em
 
 // For sticky footer
 #wrap
@@ -312,6 +323,7 @@ html, body
   .user
     white-space: nowrap
 
+// Icons
 .github
   @include icon-after($github-alt)
 
@@ -323,11 +335,20 @@ html, body
   &.sponsored
     @include icon-before($star)
 
+.icon-plus::before
+  margin-right: 0.5em
+
+//override BS
+html a:hover i, body a:hover i
+  color: white
+
 .hint
   font-size: 0.9em
   color: $gray
   i
     margin-right: 0.25em
+
+// Forms
 
 form
   .help-block
