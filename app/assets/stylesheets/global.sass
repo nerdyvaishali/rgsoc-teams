@@ -39,14 +39,57 @@ html, body
 
 // override Bootstrap btn
 .btn-group
-  margin: 0.1em 0
+  margin: 0.1em 0 0.1em 0.2em
 .btn
   background-image: none
+  background-color: white
 .btn-default, .btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger
-  box-shadow: none
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2)
   text-shadow: none
+// BS @mixin button-variant($color, $background, $border)
+// Color needs to be declared inidiviually to override BS
+.btn-primary
+  @include button-variant($brand-primary, $btn-bg, $brand-primary)
+  &:hover,
+  &:focus,
+  &:active
+    background-color: $brand-primary
+    color: white
+.btn-success
+  @include button-variant($brand-success, $btn-bg, $brand-success)
+  &:hover,
+  &:focus,
+  &:active
+    background-color: $brand-success
+    color: white
+.btn-info
+  @include button-variant($brand-info, $btn-bg, $brand-info)
+  &:hover,
+  &:focus,
+  &:active
+    background-color: $brand-info
+    color: white
+.btn-warning
+  @include button-variant($brand-warning, $btn-bg, $brand-warning)
+  &:hover,
+  &:focus,
+  &:active
+    background-color: $brand-warning
+    color: white
+.btn-danger
+  @include button-variant($brand-danger, $btn-bg, $brand-danger)
+  &:hover,
+  &:focus,
+  &:active
+    background-color: $brand-danger
+    color: white
 .btn-default
-  background-color: #eee
+  @include button-variant($darkgray, $btn-bg, $darkgray)
+  &:hover,
+  &:focus,
+  &:active
+    background-color: $darkgray
+    color: white
 input.btn[value="Go"]
   margin: 0 0 0 0.6em
 .btn-sm
