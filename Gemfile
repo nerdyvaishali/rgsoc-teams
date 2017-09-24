@@ -25,6 +25,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'pretender'
 
+gem 'webpacker'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'sprockets-rails'

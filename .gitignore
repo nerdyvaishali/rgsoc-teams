@@ -27,3 +27,6 @@ coverage/
 
 conferences_data.rb
 conferences_raffle.txt
+/public/packs
+/public/packs-test
+/node_modules
